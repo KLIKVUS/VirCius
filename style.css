@@ -1,0 +1,415 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: black;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+
+    z-index: -11;
+    position: fixed;
+    top: 0;
+
+    filter: brightness(44%) blur(2px);
+    background: url("images/bg.gif") no-repeat center / cover fixed;
+}
+
+
+/* Загрузка сайта */
+.load {
+    position: fixed;
+    width: 100%;
+    height: calc(100% + 100vh);
+    margin: -50vh auto;
+    
+    color: whitesmoke;
+    font: 150px impact;
+    background-color:  #636363;
+    text-shadow: 4px 4px 4px slategrey;
+    border-radius: 100px;
+    z-index: 11;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translate(0, -300vh);
+}
+/* Регулировка нимации загрузки */
+.anim {
+    transition-duration: 2s;
+    transition-delay: 1000ms;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.51,-0.52,.47,1.47);
+}
+
+
+/* Основа */
+.site {
+    margin: 40px 30px 0;
+
+    /* padding: 10px; */
+    /* border-radius: 20px 20px 0 0; */
+    /* background: #73727244; */
+}
+
+
+/* Шапка */
+.hat {
+    position: relative;
+    padding: 10px 50px 0;
+    height: calc(100vh - 50px);
+
+    color: #D9D9D9;
+    text-align: center;
+    font-size: 35px;
+    font-family: cursive;
+    
+    border: solid 2px #9C957E;
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hat::before {
+    content: ' ';
+
+    background: url("images/baner.gif") no-repeat center / cover fixed;
+    filter: blur(2px) brightness(10%) opacity(1);
+
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: -1;
+}
+
+
+
+/* Контет сайти и его теги */
+.content {
+    margin: 25px 0 auto;
+    padding: 50px 0 0 0;
+
+    text-align: center;
+    font-size: 18px;
+    
+    color: rgb(206, 194, 179);
+    background: rgba(188, 143, 143, 0.1);
+}
+.content h2{
+    color: #e6e0d9;
+}
+
+/* Карточки с вирусами */
+.box {
+    padding: 50px calc(50% - 500px);
+    padding-bottom: 0;
+}
+.card {
+    width: calc(110vh / 4);
+    height: 40vh;
+    margin: 0 0 50px 0;
+    padding: 1%;
+
+    overflow: hidden;
+    display: inline-block;
+    filter: brightness(70%);
+
+    font-size: 24px;
+    font-family: "Jura", sans-serif;
+    text-shadow: 1px 2px 5px rgb(71, 71, 71);
+
+    border-radius: 8px;
+    background-color: rgba(155, 141, 155, 0.692);
+}
+.card a {
+    position: absolute;
+    padding-bottom: 5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    font-size: 20px;
+    color: #cecece;
+    background-color: rgba(0, 117, 117, 0.356);
+    border-radius: 0 0 8px;
+    text-decoration: none;
+}
+.marg {
+    margin-right: 5%;
+}
+.card-text {
+    margin-bottom: 15px;
+}
+/* Анимация карточек при наведении */
+.card:hover {
+    filter: brightness(100%);
+    transform: scale(1.25) ;
+}
+
+
+/* Более подробно о вирусах */
+.VirContent {
+    text-align: left;
+    font-family: 'Exo 2', sans-serif;
+    list-style: circle;
+    padding: 5px 15%;
+    line-height: 25px;
+}
+.VirContent li {
+    margin-bottom: 30px;
+}
+
+
+
+/* Игра, лол */
+.boxed {
+    text-align: center;
+    line-height: 50px;
+    margin: 25px 0 auto;
+    padding: 50px 0 50px 0;
+    background: rgba(188, 143, 143, 0.1);
+}
+.boxed a {
+    color: #cecece;
+    text-decoration: none;
+}
+.game {
+    width: 1400px;
+    height: 700px;
+
+    border-radius: 14px;
+    box-shadow: 0 0 0 10px #121212;
+}
+
+
+
+/* Скачать вирус ( ФЭК! ) */
+.dow {
+    font-size: 24px;
+    font-family: 'Exo 2', sans-serif;
+    color: #b1a699;
+    line-height: 30px;
+}
+.dow h2 {
+    color: #e9e1d7;
+}
+.dow img:hover {
+    transform: scale(1.2) translateY(20px);
+}
+
+
+
+/* Подвал */
+footer {
+    width: 100%;
+    padding-bottom: 30px;
+    background-color: #222222;
+
+    text-align: center;
+    font-size: 24px;
+    color: rgb(131, 123, 114);
+}
+
+
+
+/* Навигация и все к ней относящиеся */
+.navigation {
+    height: 25vh;
+
+    padding: 10px;
+    padding-bottom: 0;
+    padding-top: 35px;
+
+    position: fixed;
+    left: 25%;
+    right: 25%;
+    bottom: calc(-25vh - 7px);
+
+    opacity: 0.9;
+    background: #494949ee;
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+
+    border: solid 2px rgb(145, 76, 99);
+    border-radius: 15% 15% 0 0;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, .6);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navigation:hover {
+    opacity: 1;
+    transform:translateY(calc(-25vh - 5px));
+    box-shadow: 0 0 50px 99999px rgba(41, 41, 41, 0.5);
+    box-shadow: 0 0 50px 100vh rgba(41, 41, 41, .5);
+}
+.animN {
+    transition-duration: 0.2s;
+    transition-delay: 100ms;
+    transition-property: transform, opacity, box-shadow, filter;
+    transition-timing-function: cubic-bezier(0,.28,.79,1.03);
+}
+
+.nav-text {
+    color: #D9D9D9;
+    font: 20px monospace;
+    font-family: "Jura", sans-serif;
+
+    text-align: center; 
+    width: calc(100% - 24px);
+    position: absolute;
+    top: -3px;
+}
+.panel {
+    color: #D9D9D9;
+    line-height: 30px;
+
+    height: calc(100% - 10px);
+    margin-bottom: 0;
+    padding: 10px;
+
+    border: solid 1px #9C957E;
+    border-bottom: 0;
+    border-radius: 8px;
+}
+.menu {
+    text-decoration: none;
+    list-style: none;
+}
+.menu a {
+    color: #9B8D9B;
+    text-decoration: none;
+}
+/* Форма для ошибок */
+.box-form {
+    color: #D9D9D9;
+    margin: auto;
+}
+.form {
+    color: #9B8D9B;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.in-form {
+    padding: 5px;
+    margin-bottom: 10px;
+
+    font-size: 15px;
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+
+    border: solid 1px #222;
+    border-radius: 7px;
+    background-color:  #b3a3b3;
+}
+
+
+
+
+/* Для мобилки */
+@media ( min-width: 800px ) and ( max-width: 1500px ) {
+    .navigation {
+        left: calc(25% / 4);
+        right: calc(25% / 4);
+    }
+    .game {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media ( min-width: 360px ) and ( max-width: 799px ) {
+    .load {
+        font-size: calc(150px / 2);
+    }
+    .site {
+        margin: 10px 10px 0 10px;
+    }
+    .hat {
+        height: calc(95vh - 20px);
+        padding: 25px;
+    }
+    .box {
+        padding: 40px calc(50% - 500px);
+        padding-bottom: 0;
+    }
+    .card {
+        width: calc(100% / 1.5);
+        margin: 0 0 50px 0;
+        font-size: 18px;
+    }
+    .boxed {
+        display: none;
+    }
+    .navigation {
+        left: calc(25% / 4);
+        right: calc(25% / 4);
+        bottom: calc(-30vh - 7px);
+        height: 30vh
+    }
+    .navigation:hover {
+        transform:translateY(calc(-70% - 5px));
+    }
+    .panel {
+        margin: auto;
+        padding: 15px;
+        padding-top: 10px;
+        line-height: 25px;
+    }
+    .box-form {
+        display:none;
+    }
+}
+
+@media ( min-width: 0px ) and ( max-width: 360px ) {
+    .load {
+        font-size: calc(150px / 3);
+    }
+    .site {
+        margin: 0;
+    }
+    .hat {
+        height: calc(95vh - 10px);
+        padding: 25px;
+    }
+    .box {
+        padding: 34px calc(50% - 500px);
+        padding-bottom: 0;
+    }
+    .card {
+        width: calc(100% / 1.5);
+        margin: 0 0 45px 0;
+        font-size: 18px;
+    }
+    .card a {
+        font-size: 18px;
+    }
+    .boxed {
+        display: none;
+    }
+    .navigation {
+        font-size: 15px;
+        left: 0;
+        right: 0;
+    }
+    .panel {
+        margin: auto;
+        padding: 5px;
+        padding-top: 0;
+        line-height: 20px;
+    }
+    .box-form {
+        display:none;
+    }
+}
