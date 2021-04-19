@@ -32,19 +32,17 @@ body {
     font: 150px impact;
     background-color:  #636363;
     text-shadow: 4px 4px 4px slategrey;
-    border-radius: 100px;
+    border-radius: 1vw;
     z-index: 11;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    transform: translate(0, -300vh);
 }
 /* Регулировка нимации загрузки */
 .anim {
     transition-duration: 2s;
-    transition-delay: 1000ms;
+    transition-delay: 250ms;
     transition-property: transform;
     transition-timing-function: cubic-bezier(.51,-0.52,.47,1.47);
 }
@@ -78,7 +76,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-.hat::before {
+/* .hat::before {
     content: ' ';
 
     background: url("images/baner.gif") no-repeat center / cover fixed;
@@ -87,11 +85,11 @@ body {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     z-index: -1;
-}
+} */
 
 
 
-/* Контет сайти и его теги */
+/* Контет сайта и его теги */
 .content {
     margin: 25px 0 auto;
     padding: 50px 0 0 0;
@@ -119,7 +117,7 @@ body {
 
     overflow: hidden;
     display: inline-block;
-    filter: brightness(70%);
+    filter: brightness(100%);
 
     font-size: 24px;
     font-family: "Jura", sans-serif;
@@ -146,11 +144,6 @@ body {
 }
 .card-text {
     margin-bottom: 15px;
-}
-/* Анимация карточек при наведении */
-.card:hover {
-    filter: brightness(100%);
-    transform: scale(1.25) ;
 }
 
 
@@ -229,32 +222,26 @@ footer {
 
     position: fixed;
     left: 25%;
-    right: 25%;
-    bottom: calc(-25vh - 7px);
+    bottom: -25vh;
 
-    opacity: 0.9;
     background: #494949ee;
     font-family: 'Exo 2', sans-serif;
     text-align: center;
 
     border: solid 2px rgb(145, 76, 99);
-    border-radius: 15% 15% 0 0;
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, .6);
+    border-radius: 2vw 2vw 0 0;
 
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.navigation:hover {
-    opacity: 1;
-    transform:translateY(calc(-25vh - 5px));
-    box-shadow: 0 0 50px 99999px rgba(41, 41, 41, 0.5);
-    box-shadow: 0 0 50px 100vh rgba(41, 41, 41, .5);
+.menuOpCl {
+    transform:translateY(calc(-25vh + 4px));
 }
 .animN {
     transition-duration: 0.2s;
     transition-delay: 100ms;
-    transition-property: transform, opacity, box-shadow, filter;
+    transition-property: transform;
     transition-timing-function: cubic-bezier(0,.28,.79,1.03);
 }
 
@@ -266,19 +253,19 @@ footer {
     text-align: center; 
     width: calc(100% - 24px);
     position: absolute;
-    top: -3px;
+    top: 0px;
 }
 .panel {
     color: #D9D9D9;
     line-height: 30px;
 
-    height: calc(100% - 10px);
+    height: calc(100% - 25px);
     margin-bottom: 0;
     padding: 10px;
 
     border: solid 1px #9C957E;
     border-bottom: 0;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
 }
 .menu {
     text-decoration: none;
